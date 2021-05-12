@@ -1,0 +1,62 @@
+.container {
+  height: 100vh;
+  width: 70%;
+  background-color: #34434e;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  .item {
+    background-color: #136fb6;
+    color: rgb(219, 219, 219);
+    text-align: center;
+    opacity: 0;
+
+    &.fadeToRight {
+      animation: fadeToRight 1.5s ease-in-out forwards;
+  
+      @keyframes fadeToRight {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &.fadeIn {
+      animation: fadeIn 1.5s ease-in-out forwards;
+  
+      @keyframes fadeIn {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &.zoomOut {
+      animation: zoomOut 1.5s ease-in-out forwards;
+  
+      @keyframes zoomOut {
+        from {
+          transform: scale(0);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
